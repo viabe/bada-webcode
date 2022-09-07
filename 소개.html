@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>회사소개</title>
+	<style>
+	*{
+    font-family: 'Sunflower', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color:black;
+}
+
+.firsttext{
+    font-size: 35px;
+    font-weight: lighter;
+}
+
+h4{
+    font-weight: lighter;
+}
+
+.intro{
+	height: 80vh;
+    background-image: url("image/intro1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.header{
+    display: flex;
+    width: 1200px;
+    margin: auto;
+    height: 90px;
+}
+
+.searcharea{
+    width: 250px;
+    height: 35px;
+    background: rgba(0, 0, 0 ,0.5);
+    border-radius: 10px;
+    margin-top: 24px;
+}
+
+.searcharea > form > input{
+    border:none;
+    width: 200px;
+    height: 35px;
+    background: rgba(0, 0, 0 ,0);
+    color: #ffffff;
+    padding-left: 10px ;
+    
+}
+
+.searcharea > form > span{
+    width: 50px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.headerlist{
+    display: flex;
+    justify-content: flex-end;
+    line-height: 90px;
+    width:calc(1200px - 250px);
+}
+
+.headerlist>li{
+    margin-left: 85px;
+}
+
+.headerlist a{
+    color: white;
+}
+.headerlist a:hover{
+    color:violet
+}
+
+.searcharea form span:hover{
+    color: violet;
+}
+
+.intro_text > h1,
+.intro_text > h4{
+    color:white
+}
+
+.intro_text{
+    width: 100%;
+    margin: 200px auto 200px auto; /*순서대로 상 우 하 좌 이다*/
+    text-align: center;
+}
+/*헤더 끝*/
+.main_introduce{
+    width: 100%;
+    height: 1800px;
+    margin-top:-132px;
+    background: rgb(226, 226, 226);
+}
+.main_introduce > .m_text{
+    padding-top: 90px;
+    text-align: center;
+   
+}
+.main_introduce>.tt{
+	width: 1600px;
+    margin:45px auto;
+	height: 200px;
+}
+.main_introduce>.tt>h1{
+	 padding-top: 100px;
+	font-weight: lighter
+}
+.main_introduce>.tt1{
+	width: 1200px;
+    display: flex;
+    margin:45px auto;
+}
+.main_introduce>.tt1>p{
+    padding-left: 30px;
+    font-size: 24px;
+}
+.main_introduce>.tt2{
+	width: 1200px;
+    margin:45px auto;
+	padding-top: 50px;
+	height: 500px;
+}
+.main_introduce>.tt2>img{
+	float: right;
+}
+.main_introduce>.tt2>p{
+    padding-right: 30px;
+    font-size: 24px;
+}
+.main_introduce>.t1{
+	width: 1600px;
+    margin:45px auto;
+	padding-top: 50px;
+}
+.main_introduce >.t1> h2{
+    padding-top: 150px;
+    text-align: left;
+	font-weight: normal;
+}
+.main_introduce>.tt3{
+	width: 1200px;
+    margin:45px auto;
+	height: 500px;
+	display: flex;
+}
+.main_introduce>.tt3>p{
+	padding-left: 30px;
+    font-size: 24px;	
+}
+.main_text3{
+    width: 100%;
+    height: 240px;
+    background: rgb(49, 48, 48);
+}
+
+
+.main_text3> ul{
+    display: flex;
+}
+
+.main_text3> ul >li{
+    flex: 1;
+    text-align: center;
+    padding: 30px;
+    color: blanchedalmond;
+}
+.main_text3 > ul >li> .call{
+    color: blanchedalmond;
+    font-size: 30px;
+    padding: 30px;
+}
+
+.main_text3 > ul> li:not(:last-child) {
+    border-right: 1px solid white;
+}
+	</style>
+</head>
+
+<body>
+	<div class="intro">
+            <div class="header">
+                <div class="searcharea">
+                    <form>
+                        <input type="search" placeholder="검색">
+                        <span class="searchbutton">검색</span>
+                    </form>
+                </div>
+                <ul class="headerlist">
+                    <li><a href="index.html">Home</a></li>
+					<li><a href="소개.html">회사소개</a></li>
+                    <li><a href="건축물 소개.html">건축물소개</a></li>
+                </ul>
+            </div>
+            <div class="intro_text">
+                <h1 class="firsttext">M&K 건축사 사무소</h1>
+                <h4>아름다운 건설, 친환경적인 설비</h4>
+            </div>
+        </div>
+<div class="main_introduce"><!--본문 부분-->
+	<div class="m_text"><h1>기업 소개</h1></div>
+	<div class="t1"><h2>M&k건축사사무소</h2></div>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<div style="text-align:center"><img src="image/소개/main_introduce(소개).png" width="1558" height="559" alt=""/></div>
+	<div class="tt"><h1>주택은 사람이 생활하는<br>공간입니다!</h1></div>
+	<div class="tt1">
+<img src="image/소개/main1.png" width="646" height="387" alt=""/><p>단순히 잠을 자는 공간이 아닌 가족 구성원 간의 소통의 장이기도 하고 내일을 위한 휴식의 공간이기도 합니다.
+		<br>집은 거주하는 가족의 안전이 제일 중요하고<br> 몸과 마음이 편하게 쉴 수 있는<br> 편의성도 필요합니다.<br>또한 집은 부동산으로 재산적 가치도 있기에<br> 외적, 내적으로도 아름다워야 합니다.</p></div>
+	<div class="tt2"><img src="image/소개/main2.png" width="400" height="437" alt=""/><p>건축을 의뢰하는 건축주도 사람입니다. 주택을 설계하고 시공하는 것도<br>사람이 합니다.
+		건축회사는 그런 사람들이 모인 집단입니다. 직원 한 명<br> 한 명을 내 가족처럼 아끼는 기업문화, 이것이 좋은 건축을 하기 위한<br> 첫 마음이라고 생각합니다.<br>
+		건축주도 존중하고, 직원도 존중하고, 협력업테도 존중해야<br> 좋은 결과물을 얻을 수 있습니다. M&K건축은 이런 "사람 존중"을<br> 최우선 가치에 두고 기업을 경영합니다.</p></div>
+	<div class="tt3"><img src="image/소개/main3.png" width="600" height="359" alt=""/><p>사람이 살아온 길, 살아갈 길을 삶이라고 표현합니다. 우리의 삶에 주거공간보다 중요한 것이 있을까요?<br> 우리는 건축주님의 삶을 설계에 녹여내기 위해 <br>고민에 고민, 생각에 생각을 거듭해 건축주님께 <br>딱 맞는 설계를 제시해 드리겠습니다.<br> 또한 구조적으로 튼튼하고 안전한 집, 아늑하고 <br>편안함을 느낄 수 있는 집으로 시공해드리겠습니다.</p> </div>
+<div class="main_text3"><!--회사 정보 부분-->
+                <ul>
+                    <li>
+                        <div class="call">직원</div>
+                        XXX
+                        <br>김XX
+                  </li>
+                  <li>
+                        <div class="call">위치</div>
+                        경기도 XX시 XX3로 18
+     1                  <br>지번 : 경기도 XX시 XX동 138-8
+                  </li>
+                    <li>
+                      <div class="call">문의</div>
+                        031-XXX-XXXX
+                  </li>
+                </ul>
+            </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>M&K건축사사무소</title>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<style>
+	*{
+    font-family: 'Sunflower', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color:black;
+}
+
+
+
+.firsttext{
+    font-size: 35px;
+    font-weight: lighter;
+}
+
+h4{
+    font-weight: lighter;
+}
+
+.intro{
+	height: 70vh;
+    background-image: url("image/intro1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.header{
+    display: flex;
+    width: 1200px;
+    margin: auto;
+    height: 90px;
+}
+
+.searcharea{
+    width: 250px;
+    height: 35px;
+    background: rgba(0, 0, 0 ,0.5);
+    border-radius: 10px;
+    margin-top: 24px;
+}
+
+.searcharea > form > input{
+    border:none;
+    width: 200px;
+    height: 35px;
+    background: rgba(0, 0, 0 ,0);
+    color: #ffffff;
+    padding-left: 10px ;
+    
+}
+
+.searcharea > form > span{
+    width: 50px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.headerlist{
+    display: flex;
+    justify-content: flex-end;
+    line-height: 90px;
+    width:calc(1200px - 250px);
+}
+
+.headerlist>li{
+    margin-left: 85px;
+}
+
+.headerlist>li>a{
+    color: white;
+}
+.headerlist a:hover{
+    color:violet
+}
+
+.searcharea form span:hover{
+    color: violet;
+}
+
+.intro_text > h1,
+.intro_text > h4{
+    color:white
+}
+
+.intro_text{
+    width: 100%;
+    margin: 200px auto 200px auto; /*순서대로 상 우 하 좌 이다*/
+    text-align: center;
+}
+
+.introduce{
+    position: relative;
+    top: -66px;
+    display:flex;
+    width: 1200px;
+    background:white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0 ,0.5); /*좌우로 움직이는 위치,높이,흐려지는정도, 색깔. 박스 새도우는 박스에 음영을 넣는것*/
+    margin: auto;
+}
+
+.introduce > li {
+    flex: 1;
+    height: 132px;
+}
+
+.introduce > li > div{
+    text-align: center;
+    height: 57px; /*높이 설정*/
+    margin-top: 37px; /*글씨가 중간으로 왔을 때의 윗 여백 */
+    border-right: 1px solid gray; /*글씨의 오른쪽에 회색줄이 생기는 것 */
+}
+
+.introduce > li:not(:last-child) > div{
+    border-right: 1px solid gray;
+} /*마지막 요소인 자식을 무시하고 border를 오른쪽에 넣으라는 이야기 css not 셀렉터 확인 */
+
+.content{
+    font-size: 24px;
+    font-weight: lighter;
+} 
+
+.result{
+    font-size: 20px;
+}
+
+/*main_text 본문 시작*/
+.main_text{
+    width: 100%;
+    height: 600px;
+    margin-top:-132px;
+    background: rgb(226, 226, 226);
+}
+
+.main_text > h1{
+    padding-top: 120px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.icon{
+    display: flex;
+    width: 1200px;
+    margin: auto;
+}
+
+.icon >li{
+    flex: 1;
+    margin-top: 50px;
+    padding: 20px ;
+    margin-right: 20px;
+    
+    
+    
+    background: white;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.icon > li > .icon_img{
+    margin-top: 40px;
+}
+
+.icon > li:not(:last-child){
+    margin-right: 20px;
+}
+
+.icon_text{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.icon_text_number{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.icon_text1{
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.main_text1{
+    width: 100%;
+    height: 659px;
+}
+
+.main_text1 > h1{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.main_text1 > .serve{
+    text-align: center;
+}
+
+.photo_text{
+    width: 1200px;
+    display: flex;
+    margin:45px auto;
+}
+
+.photo_text > .icon_text1{
+    padding: 20px;
+}
+
+/*이제 여기가 이메일이나 끝부분*/
+
+.main_text2{
+    width: 100%;
+    height: 450px;
+    background: rgb(80, 78, 78);
+}
+
+.main_text2 > .main_h{
+    padding: 25px;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+
+.main_text2 > .email{
+    margin: auto;
+    text-align: center;
+}
+
+.main_text3{
+    width: 100%;
+    
+    background: rgb(49, 48, 48);
+}
+
+
+.main_text3> ul{
+    display: flex;
+}
+
+.main_text3> ul >li{
+    flex: 1;
+    text-align: center;
+    padding: 30px;
+    color: blanchedalmond;
+}
+.main_text3 > ul >li> .call{
+    color: blanchedalmond;
+    font-size: 30px;
+    padding: 30px;
+}
+
+.main_text3 > ul> li:not(:last-child) {
+    border-right: 1px solid white;
+}
+
+div.name_write input{
+    padding: 1px;
+    width: 450px;
+    font-size: 15px;
+}
+
+
+div.email_write input{
+    padding: 1px;
+    font-size: 15px;
+    width: 300px;
+}
+  
+div.contact_write textarea{
+    padding: 1px;
+    height: 70px;
+    width: 450px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+.button{padding-top: 15px;
+padding-bottom: 15px;}
+.dialog_test{
+  background-color: #d49360;
+   /* border-radius:0.5em; */
+  padding: 5px;
+  width: 100%;
+  font-size: 18px;
+  color: white;
+}
+div.button{
+  margin: auto;
+  width: 260px;
+}
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+        <div class="intro">
+          <div class="header">
+            <div class="searcharea"><!--검색 창을 만든 부-->
+                    <form>
+                        <input type="search" placeholder="검색">
+                        <span class="searchbutton">검색</span>
+                    </form>
+              </div>
+              <ul class="headerlist"><!--위의 헤더 부-->
+                  <li><a href="index.html">Home</a></li>
+				  <li><a href="소개.html">회사소개</a></li>
+                  <li><a href="건축물 소개.html">건축물소개</a></li>
+              </ul>
+            </div>
+            <div class="intro_text">
+                <h1 class="firsttext">M&K 건축사 사무소</h1><!--메인 제-->
+                <h4>아름다운 건설, 친환경적인 설비</h4>
+            </div>
+        </div>
+        <!--intro 끝-->
+        <ul class="introduce"><!--메인의 네모 상자 부-->
+            <li>
+                <div>
+                    <div class="content">용도변경</div>
+                    <div class="result">건물의 용도를 변경</div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="content">건축설계</div>
+                    <div class="result">다양한 시설 가능</div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="content">감리</div>
+                    <div class="result">장기 감리 가능</div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="content">석면감리</div>
+                    <div class="result">특화되어있는 분야</div>
+                </div>
+            </li>
+        </ul>
+        <!-- introduce 끝!-->
+
+        <div class="main_text">
+            <h1>WHO WE ARE</h1>
+            
+            
+            <ul class="icon"><!--아이콘과 글자, 숫자 숫자 부분에는 애니메이션을 포함-->
+                <li>
+                    <div class="icon_img">
+                        <img src="image/apartment-24px.svg">
+                    </div>
+                    <div class="icon_text">
+
+                        <span class="counter">22</span>
+                        
+                        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+                        <script>
+                            jQuery(document).ready(function($){
+                                $('.counter').counterUp({
+                                    delay: 10,
+                                    time: 1000
+                                });
+                            });
+                            
+                        </script>
+                    </div>
+                    <div class="icon_text1">year <br> 연차</div>
+                </li>
+                <li>
+                    <div class="icon_img">
+                        <img src="image/holiday_village-24px.svg">
+                    </div>
+                    <div class="icon_text">work</div>
+                    <div class="icon_text1">다양한 건물 제작 경험 다수</div>
+                </li>
+                <li>
+                    <div class="icon_img">
+                        <img src="image/maps_home_work-24px.svg">
+                    </div>
+                    <div class="icon_text">                        
+                        
+                        <span class="counter">100</span>
+                        
+                        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+                        <script>
+                            jQuery(document).ready(function($){
+                                $('.counter').counterUp({
+                                    delay: 10,
+                                    time: 1000
+                                });
+                            });
+                            
+                        </script>
+
+                        
+                        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+                        <script src="Counter-Up-master/jquery.counterup.min.js"></script>
+                        
+                    </div>
+                    <div class="icon_text1">안정성 100% 보장</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main_text1"><!--메인 부분 텍스트-->
+            <h1>Performance</h1>
+            <div class="serve">아름다운 건축, 친환경적인 설계</div>
+            
+            <div class="photo_text">
+                <div class="buliding_photo">
+                    <img src="image/unnamed.jpg" >                   
+                </div>
+                <div class="icon_text1">
+                    <h3>아름답고 튼튼한 건물로 인기많은 건축사</h3>
+                    <br>저희는 여러분의 공간을 행복함으로 디자인합니다.
+					<br>정답이 없는 건축에서 도전정신과 창조적인 디자인을
+					<br>제안하여 여러분께 새로운 행복을 선물하겠습니다.
+                  <br>집은 가족의 마음이 머무는 것이라는 것을 잊지 않고
+                  <br>M&K건축사사무소는 여러분의 진정한 삶의 행복을 위해 집과 공간을 연구하고 있습니다. 
+                  <br>누구보다 여러분의 입장에서 생각하고,
+                  <br>신뢰감을 바탕으로 으뜸이 되는 기업이 되겠습니다.
+              </div>
+            </div>
+
+            <div class="main_text2">
+                <div class="main_h"><!--문의를 할 수 있도록 한 부분-->
+                    m&k 건축사 사무소는 항상 열려있는 회사입니다. 언제나 문의 주세요.
+                </div>
+                
+                <!--여기부터는 이메일-->
+                <div class="email">
+                    <form id="contact-form">
+                        <input type="hidden" name="contact_number">
+
+                        <div class="name_write">
+                            <input type="text" name="to_name" placeholder="성함을 적어주세요">
+                        </div>
+                        
+                        <div class="email_write">
+                            <br><br> 
+                            <input type="text" name="str_email01" id="str_email01" style="width:100px" placeholder="이메일"> @ 
+                            <input type="text" name="str_email02" id="str_email02" style="width:100px;" disabled value="naver.com">
+                            <select style="width:100px;margin-right:10px" name="selectEmail" id="selectEmail">
+                                <option value="1">직접입력</option> 
+                                <option value="naver.com" selected>naver.com</option> 
+                                <option value="hanmail.net">hanmail.net</option>
+                                <option value="daum.com">daum.com</option> 
+                                <option value="korea.com">korea.com</option> 
+                                <option value="gmail.com">gmail.com</option>  
+                                <option value="paran.com">paran.com</option> 
+                            </select>
+                            <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script> <script type="text/javascript"> 
+                            //이메일 입력방식 선택 
+                            $('#selectEmail').change(function(){ 
+                                $("#selectEmail option:selected").each(function () { 
+                                    if($(this).val()== '1'){ //직접입력일 경우 
+                                        $("#str_email02").val(''); //값 초기화 
+                                        $("#str_email02").attr("disabled",false); //활성화 
+                                    }else{ //직접입력이 아닐경우 
+                                        $("#str_email02").val($(this).text()); //선택값 입력 
+                                        $("#str_email02").attr("disabled",true); //비활성화 
+                                    } 
+                                }); }); 
+                            </script>
+
+        
+                        </div> 
+
+                        <div class="contact_write">
+                            <br> <br>
+                            <textarea name="contact" placeholder="문의 사항"></textarea>
+                        </div>
+
+                        <!--여기부터 dialog, 문의를 하면 팝업창이 뜸 -->
+                        <div class="button">
+                            <button class="dialog_test" type="button">문의하기</button>
+                            <!-- <input type="submit" value="문의하기"> -->
+                            <!-- jquery CDN -->
+                            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+                            <!-- jquery UI CDN -->
+                            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+                            <!-- dialog 라이브러리 -->
+                            <script type="text/javascript" src="https://nowonbun.github.io/Loader/dialog.js"></script>
+                            <script>
+                                $(function(){
+                                  dialog.set({
+                                    modal: true, //팝업창 발생시 주변이 회색이 되는 것.
+                                    buttons:{
+                                      // OK:function(){
+                                      //   dialog.close();
+                                      // },
+                                      닫기: function(){
+                                        dialog.close();
+                                      },
+                                    }
+                                  });
+                                  $(".dialog_test").on("click", function(){
+                                    //다이얼 로그를 열때.
+                                    dialog.open("<p>감사합니다 문의 처리는 약간의 시간이 걸릴 수 있습니다.</p>")
+                                  });
+                                });
+                            </script>
+                          </div>
+
+
+
+                    </form>
+                </div>
+            </div>
+            
+            <div class="main_text3"><!--회사정보-->
+                <ul>
+                    <li>
+                        <div class="call">직원</div>
+                        XXX
+                        <br>김XX
+                  </li>
+                    <li>
+                        <div class="call">위치</div>
+                        경기도 XX시 XX3로 18
+     1                  <br>지번 : 경기도 XX시 XX동 138-8
+                  </li>
+                    <li>
+                        <div class="call">문의</div>
+                        031-XXX-XXXX
+                  </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
